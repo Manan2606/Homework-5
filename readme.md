@@ -1,3 +1,5 @@
 # Main Branch
 
-Please see other two branches for tasks.
+-> Main Branch has command folder with different commands.
+
+-> For tasks, please refer other two branches.
