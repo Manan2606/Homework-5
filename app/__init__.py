@@ -5,6 +5,7 @@ from app.commands.goodbye import GoodbyeCommand
 from app.commands.greet import GreetCommand
 from app.commands.menu import MenuCommand
 from app.commands.hello import HelloCommand
+from app.commands.arithmetic import AddCommand, SubtractCommand, MultiplyCommand, DivideCommand
 
 class App:
     def __init__(self): # Constructor
@@ -13,6 +14,12 @@ class App:
 
     def start(self):
         # Register commands here
+
+        self.command_handler.register_command("add", AddCommand())
+        self.command_handler.register_command("subtract", SubtractCommand())
+        self.command_handler.register_command("multiply", MultiplyCommand())
+        self.command_handler.register_command("divide", DivideCommand())
+
         self.command_handler.register_command("greet", GreetCommand())
         self.command_handler.register_command("goodbye", GoodbyeCommand())
         self.command_handler.register_command("exit", ExitCommand())
